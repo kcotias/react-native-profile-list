@@ -39,7 +39,6 @@ const adminTab = createBottomTabNavigator({
     });
 
 adminTab.navigationOptions = {
-    // Hide the header from AppNavigator stack
     header: null
 };
 
@@ -47,8 +46,13 @@ const Routes = createSwitchNavigator({
     HOME: {
         screen: adminTab, navigationOptions: () => ({
             header: null,
-        }),
+        })
     },
+    PROFILE: {
+        screen: CompanyScreen, navigationOptions: () => ({
+            header: null,
+        })
+    }
 }
 );
 
