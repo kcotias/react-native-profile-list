@@ -10,7 +10,7 @@ import colors from './config/colors';
 const styles = StyleSheet.create({
   nextButton: {
     fontWeight: 'bold',
-    color: 'white',
+    color: colors.secondary,
     marginRight: 5,
     fontSize: 16
   },
@@ -20,7 +20,7 @@ const styles = StyleSheet.create({
     justifyContent: 'space-around'
   },
   text: {
-    color: 'rgba(255, 255, 255, 0.8)',
+    color: colors.primary,
     backgroundColor: 'transparent',
     textAlign: 'center',
     paddingHorizontal: 14,
@@ -30,7 +30,7 @@ const styles = StyleSheet.create({
   },
   title: {
     fontSize: 22,
-    color: 'white',
+    color: colors.primary,
     backgroundColor: 'transparent',
     textAlign: 'center',
     marginBottom: 16,
@@ -43,23 +43,20 @@ const slides = [
     name: 'welcome',
     title: 'Seja bem vindo!',
     text: 'lorem ipsum!',
-    colors: colors.primary,
-    image: 'welcome'
+    backgroundColor: 'red',
   },
   {
     name: 'screen1',
     title: 'Tudo ao seu alcance!',
     text: 'lorem ipsum!',
-    colors: colors.primary,
-    image: 'find'
+    backgroundColor: 'white',
 
   },
   {
     name: 'screen2',
     title: 'lorem ipsum!',
     text: 'lorem ipsum!',
-    colors: colors.primary,
-    image: 'register'
+    backgroundColor: 'white',
 
   }
 ];
@@ -84,60 +81,12 @@ export default class App extends Component {
       });
   }
 
-  _renderItem = (props) => {
-    const chooseImage = () => {
-      switch (props.image) {
-        case 'welcome': {
-          return (
-            <Image
-              style={{ height: 200, width: 200 }}
-              resizeMode={'contain'}
-            //source={require('')}
-            />
-          );
-        }
-        case 'find': {
-          return (
-            <Image
-              style={{ height: 200, width: 200 }}
-              resizeMode={'contain'}
-            //source={require('')}
-            />
-          );
-        }
-        case 'register': {
-          return (
-            <Image
-              style={{ height: 200, width: 200 }}
-              resizeMode={'contain'}
-            // source={require('')}
-            />
-          );
-        }
-        default: {
-          return null;
-        }
-      }
-    };
-    return (
-      <View
-        style={[styles.mainContent, {
-          paddingTop: props.topSpacer,
-          paddingBottom: props.bottomSpacer,
-          width: props.width,
-          height: props.height,
-          backgroundColor: props.colors
-        }]}>
-        <View style={{ flex: 1, justifyContent: 'flex-end', paddingTop: 90 }}>
-          {chooseImage()}
-        </View>
-        <View style={{ flex: 1, paddingTop: 90, paddingHorizontal: 20 }}>
-          <Text style={styles.title}>{props.title}</Text>
-          <Text style={styles.text}>{props.text}</Text>
-        </View>
-      </View>
-    );
-  }
+  _renderItem = ({ item }) => (
+    <View style={styles.mainContent}>
+      <Text style={styles.title}>{item.title}</Text>
+      <Text style={styles.text}>{item.text}</Text>
+    </View>
+  )
 
   _onDone = () => {
     this.setState({ showRealApp: true });
@@ -166,7 +115,9 @@ export default class App extends Component {
         onDone={this._onDone}
         renderDoneButton={this._renderDoneButton}
         renderNextButton={this._renderNextButton}
-        renderItem={this._renderItem} />
+        renderItem={this._renderItem}
+        activeDotStyle={{ backgroundColor: colors.secondary }}
+      />
     );
   }
 }
