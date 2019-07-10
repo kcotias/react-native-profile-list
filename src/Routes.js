@@ -33,8 +33,8 @@ const adminTab = createBottomTabNavigator({
         }),
         tabBarOptions: {
             activeTintColor: colors.secondary,
-            inactiveTintColor: '#fff',
-            style: { backgroundColor: colors.primary, paddingTop: 5 }
+            inactiveTintColor: 'gray',
+            style: { paddingTop: 5 }
         }
     });
 
