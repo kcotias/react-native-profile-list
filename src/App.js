@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import {
-  View, StyleSheet, Text, Image, AsyncStorage, Platform
+  View, StyleSheet, Text, AsyncStorage
 } from 'react-native';
 import AppIntroSlider from 'react-native-app-intro-slider';
 import Routes from './Routes';
