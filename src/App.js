@@ -104,7 +104,7 @@ export default class App extends Component {
   render() {
     if (this.state.showRealApp) {
       return (
-        <View style={{ flex: 1, paddingTop: Platform.OS === 'ios' ? 32 : 0 }}>
+        <View style={{ flex: 1 }}>
           <Routes />
         </View>
       );

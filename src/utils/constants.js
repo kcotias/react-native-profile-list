@@ -63,3 +63,5 @@ const LIST_DATA = [
         "idade": 28
     }
 ]
+
+export default LIST_DATA;
