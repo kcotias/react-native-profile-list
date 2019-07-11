@@ -2,7 +2,6 @@ import React from 'react';
 import { View, Text, StyleSheet, Platform, Image } from 'react-native';
 import colors from '../config/colors';
 
-
 const ProfileScreen = ({ navigation }) => (
     <View style={styles.container}>
         <Text style={{ marginTop: 10, alignSelf: 'center', fontWeight: 'bold', color: colors.font, fontSize: 20 }}>Perfil</Text>

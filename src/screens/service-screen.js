@@ -67,7 +67,6 @@ const styles = StyleSheet.create({
     flatlist: {
         paddingHorizontal: 20,
     }
-
 });
 
 export default ServiceScreen;

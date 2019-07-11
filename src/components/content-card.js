@@ -2,7 +2,6 @@ import React from 'react';
 import { View, Text, StyleSheet, Image } from 'react-native';
 import colors from '../config/colors';
 
-
 const ContentCard = (props) => {
 
     return (
@@ -84,7 +83,6 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         alignItems: 'center'
     }
-
 });
 
 export default ContentCard;
