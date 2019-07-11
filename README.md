@@ -2,8 +2,6 @@
 
 This project is just a simple example of a profile list App built with React Native.
 
-As usual, i tried to make my commits work like explanations, so if you follow my commit history you may understand more easily what i did.
-
 ### How to run?
 
 Git Clone the Rep
