@@ -13,20 +13,27 @@ class CompanyScreen extends Component {
             <ListCard
                 nome={item.nome}
                 cargo={item.cargo}
+                foto={item.foto}
                 onPress={() => handlePress(item)}
                 index={index}
             />
         );
 
         const handlePress = (item) => {
-            this.props.navigation.navigate('PROFILE', { nome: item.nome, cargo: item.cargo, foto: item.foto, idade: item.idade });
+            this.props.navigation.navigate('PROFILE',
+                {
+                    nome: item.nome,
+                    cargo: item.cargo,
+                    foto: item.foto, idade:
+                        item.idade
+                });
         }
 
         return (
             <View style={styles.container}>
                 <Header />
                 <FlatList
-                    style={{ paddingHorizontal: 20, marginTop: 20 }}
+                    style={styles.flatlist}
                     data={LIST_DATA}
                     renderItem={({ item, index }) => _renderItem(item, index)}
                 />
@@ -40,6 +47,7 @@ const styles = StyleSheet.create({
     container: {
         flex: 1
     },
+    flatlist: { paddingHorizontal: 20, marginTop: 10 }
 
 });
 

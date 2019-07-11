@@ -3,29 +3,32 @@ import { View, Text, StyleSheet, TouchableOpacity, ImageBackground } from 'react
 import colors from '../config/colors';
 
 
-const ListCard = (props) => (
-    <TouchableOpacity 
-        style={styles.container}
-        onPress={props.onPress}
-    >
-        <View style={styles.imgWrapper}>
-            <ImageBackground
-                source={require('../assets/img/Clip.png')}
-                resizeMode="contain"
-                style={styles.img}
-            >
-                <View style={styles.sticker}>
-                    <Text style={styles.stickerLabel}>{props.index}</Text>
-                </View>
-            </ImageBackground>
+const ListCard = (props) => {
 
-        </View>
-        <View style={{ marginLeft: 15 }}>
-            <Text style={styles.name}>{props.nome}</Text>
-            <Text style={styles.role}>{props.cargo}</Text>
-        </View>
-    </TouchableOpacity>
-);
+    return (
+        <TouchableOpacity
+            style={styles.container}
+            onPress={props.onPress}
+        >
+            <View style={styles.imgWrapper}>
+                <ImageBackground
+                    source={props.foto}
+                    resizeMode="contain"
+                    style={styles.img}
+                >
+                    <View style={styles.sticker}>
+                        <Text style={styles.stickerLabel}>{props.index}</Text>
+                    </View>
+                </ImageBackground>
+
+            </View>
+            <View style={{ marginLeft: 15 }}>
+                <Text style={styles.name}>{props.nome}</Text>
+                <Text style={styles.role}>{props.cargo}</Text>
+            </View>
+        </TouchableOpacity>
+    );
+}
 
 const styles = StyleSheet.create({
     container: {
@@ -44,38 +47,38 @@ const styles = StyleSheet.create({
         shadowRadius: 3,
         elevation: 3,
     },
-    img: { 
-        height: 80, 
-        width: 80, 
-        alignItems: 'flex-end' 
+    img: {
+        height: 80,
+        width: 80,
+        alignItems: 'flex-end'
     },
-    sticker: { 
-        height: 22, 
-        width: 22, 
-        borderRadius: 20, 
-        backgroundColor: colors.secondary, 
-        marginTop: 2, 
-        marginRight: 2, 
-        justifyContent: 'center', 
-        alignItems: 'center' 
+    sticker: {
+        height: 22,
+        width: 22,
+        borderRadius: 20,
+        backgroundColor: colors.secondary,
+        marginTop: 2,
+        marginRight: 2,
+        justifyContent: 'center',
+        alignItems: 'center'
     },
     stickerLabel: {
-        color: colors.primary, 
-        fontWeight: '700', 
+        color: colors.primary,
+        fontWeight: '700',
         fontSize: 12
     },
-    name: { 
-        fontWeight: 'bold', 
-        color: colors.font 
+    name: {
+        fontWeight: 'bold',
+        color: colors.font
     },
-    role: { 
-        fontWeight: '300', 
-        color: colors.font, 
-        fontSize: 12 
+    role: {
+        fontWeight: '300',
+        color: colors.font,
+        fontSize: 12
     },
-    imgWrapper: { 
-        justifyContent: 'center', 
-        alignItems: 'center' 
+    imgWrapper: {
+        justifyContent: 'center',
+        alignItems: 'center'
     }
 
 });
