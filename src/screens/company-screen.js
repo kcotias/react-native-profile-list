@@ -4,8 +4,6 @@ import Header from '../components/header';
 import LIST_DATA from '../utils/constants';
 import ListCard from '../components/list-card';
 
-
-
 class CompanyScreen extends Component {
 
     render() {
@@ -24,8 +22,8 @@ class CompanyScreen extends Component {
                 {
                     nome: item.nome,
                     cargo: item.cargo,
-                    foto: item.foto, idade:
-                        item.idade
+                    foto: item.foto,
+                    idade: item.idade
                 });
         }
 
