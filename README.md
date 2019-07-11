@@ -4,7 +4,7 @@ This project is just a simple example of a profile list App built with React Nat
 
 ### How to run?
 
-Git Clone the Rep
+Git Clone the Rep. <br>
 Run `yarn install`, then `react-native run-ios` or `react-native run-android` on terminal.<br>
 
 
