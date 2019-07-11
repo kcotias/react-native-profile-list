@@ -1,9 +1,9 @@
 import React from 'react';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
-import { createSwitchNavigator, createAppContainer, createBottomTabNavigator } from 'react-navigation';
+import { createStackNavigator, createAppContainer, createBottomTabNavigator } from 'react-navigation';
 
 import colors from './config/colors';
-import { CompanyScreen, ContactScreen, ServiceScreen } from './screens';
+import { CompanyScreen, ContactScreen, ServiceScreen, ProfileScreen } from './screens';
 
 const adminTab = createBottomTabNavigator({
     Empresa: CompanyScreen,
@@ -42,14 +42,14 @@ adminTab.navigationOptions = {
     header: null
 };
 
-const Routes = createSwitchNavigator({
+const Routes = createStackNavigator({
     HOME: {
         screen: adminTab, navigationOptions: () => ({
             header: null,
         })
     },
     PROFILE: {
-        screen: CompanyScreen, navigationOptions: () => ({
+        screen: ProfileScreen, navigationOptions: () => ({
             header: null,
         })
     }
