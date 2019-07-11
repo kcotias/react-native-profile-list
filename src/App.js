@@ -17,7 +17,8 @@ const styles = StyleSheet.create({
   mainContent: {
     flex: 1,
     alignItems: 'center',
-    justifyContent: 'space-around'
+    justifyContent: 'center',
+    padding: 20
   },
   text: {
     color: colors.primary,
@@ -41,21 +42,21 @@ const styles = StyleSheet.create({
 const slides = [
   {
     name: 'welcome',
-    title: 'Seja bem vindo!',
-    text: 'lorem ipsum!',
-    backgroundColor: 'red',
+    title: 'Seja bem vindo ao meu App!',
+    text: 'Este é um simples exemplo de uma lista de profissionais. A seguir estão duas formas diferentes de listar e ver mais informações de um item da lista.',
+    backgroundColor: 'white',
   },
   {
     name: 'screen1',
-    title: 'Tudo ao seu alcance!',
-    text: 'lorem ipsum!',
+    title: 'Primeiro Exemplo',
+    text: 'Na primeira Aba (Empresas) temos um exemplo de uma FlatList, ao clicar em algum item disparamos uma função do React Navigation para navegar para uma tela especifica em prol de exibir os detalhes do item.',
     backgroundColor: 'white',
 
   },
   {
     name: 'screen2',
-    title: 'lorem ipsum!',
-    text: 'lorem ipsum!',
+    title: 'Segundo Exemplo',
+    text: 'Na segunda aba (Serviços) temos um exemplo de uma Flatlist para renderizar a lista, porém, no topo da tela temos um card com os valores controlados por state utilizando o recém lançado React Hooks que elimina a necessidade de um Class Component, podendo haver utilização do state em Functional Components. Ao clicar em um item disparamos a função do Hooks para trocar os valores atuais do Card para os valores escolhidos.',
     backgroundColor: 'white',
 
   }
