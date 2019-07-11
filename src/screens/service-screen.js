@@ -27,16 +27,6 @@ const ServiceScreen = () => {
         />
     );
 
-    const handlePress = (item) => {
-        this.props.navigation.navigate('PROFILE',
-            {
-                nome: item.nome,
-                cargo: item.cargo,
-                foto: item.foto,
-                idade: item.idade
-            });
-    }
-
     return (
         <View style={styles.container}>
             <View style={{ flex: 1 }}>
